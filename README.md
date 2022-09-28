@@ -1,2 +1,2 @@
-# techdegree-project-7
+# Techdegree Project 7_WebApp Dashboard
  WebApp Dashboard
