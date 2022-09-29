@@ -1,0 +1,17 @@
+@import 'utilities/index',
+        'base/index',
+        'component/index';
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: 
+            "header header"
+            "navigation main";
+    }
+    
+}

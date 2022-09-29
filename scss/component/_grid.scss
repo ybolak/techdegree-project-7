@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header"
+        "navigation"
+        "main";
+}
+
+.grid-header {
+    grid-area: header;
+}
+
+.grid-nav {
+    grid-area: navigation;
+}
+
+.grid-main {
+    grid-area: main;
+    display: grid;
+}
