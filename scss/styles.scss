@@ -6,12 +6,51 @@
 /*              Media Queries                    */
 /* ============================================= */
 
-@media (min-width: 768px) {
+@media (min-width: $med-break) {
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas: 
             "header header"
             "navigation main";
     }
+    .grid-main {
+        grid-template-columns: 50%;
+    }
+
+    .traffic,
+    .social,
+    .members,
+    .activity,
+    .message,
+    .setting {
+        grid-column: 1 / span 2;
+    }
+
+    .daily {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile {
+        grid-column: 2 / span 1;
+    }
     
+}
+
+@media (min-width: $lg-break) {
+    .traffic,
+    .social {
+        grid-column: 1 / span 2;
+    }
+
+    .daily,
+    .members,
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile,
+    .activity,
+    .setting {
+        grid-column: 2 / span 1;
+    }
 }

@@ -1,3 +1,18 @@
+/* ============================================= */
+/*         Descriptive colors                    */
+/* ============================================= */
+/* ============================================= */
+/*         Base style colors                     */
+/* ============================================= */
+/* ============================================= */
+/*         Font stacks                           */
+/* ============================================= */
+/* ============================================= */
+/*         Font weights                          */
+/* ============================================= */
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -337,6 +352,29 @@ template {
   display: none;
 }
 
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+* {
+  font-family: "Zen Maru Gothic", sans-serif;
+  box-sizing: border-box;
+}
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+.grid-header {
+  background-color: #7477BF;
+}
+
+.grid-nav {
+  padding: 10px 10px;
+  background-color: #4D4C72;
+}
+.grid-nav img {
+  color: #ffffff;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
@@ -357,6 +395,39 @@ template {
   display: grid;
 }
 
+.bell {
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+}
+
+.social-icon {
+  fill: #ffffff;
+  width: 80px;
+}
+
+.header-img {
+  border-radius: 50% 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.nav-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.social-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50% 50%;
+  background-color: #7477BF;
+}
+
+.grid-header {
+  display: flex;
+}
+
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
@@ -364,6 +435,45 @@ template {
   .grid-container {
     grid-template-columns: 55px 1fr;
     grid-template-areas: "header header" "navigation main";
+  }
+
+  .grid-main {
+    grid-template-columns: 50%;
+  }
+
+  .traffic,
+.social,
+.members,
+.activity,
+.message,
+.setting {
+    grid-column: 1/span 2;
+  }
+
+  .daily {
+    grid-column: 1/span 1;
+  }
+
+  .mobile {
+    grid-column: 2/span 1;
+  }
+}
+@media (min-width: 1024px) {
+  .traffic,
+.social {
+    grid-column: 1/span 2;
+  }
+
+  .daily,
+.members,
+.message {
+    grid-column: 1/span 1;
+  }
+
+  .mobile,
+.activity,
+.setting {
+    grid-column: 2/span 1;
   }
 }
 
