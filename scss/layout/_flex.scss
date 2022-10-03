@@ -1,0 +1,35 @@
+.main-header {
+    display: flex;
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.traffic-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-container {
+    display: flex;
+}
+
+.toggle-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.setting-button {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}

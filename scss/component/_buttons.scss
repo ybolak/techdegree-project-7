@@ -1,0 +1,34 @@
+.button-primary {
+    text-transform: uppercase;
+    color: $font-color-secondary;
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    background-color: $color-primary;
+}
+
+.button-disabled {
+    text-transform: uppercase;
+    color: $font-color-secondary;
+    border: none;
+    border-radius: 8px;
+    background-color: $color-btn-cancel;
+}
+
+.toggle-switch {
+    padding: 0;
+    border: none;
+    margin: 20px 0;
+}
+
+.setting-button {
+    button {
+    width: 47%;
+    }
+}
+
+#send {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

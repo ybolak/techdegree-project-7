@@ -1,0 +1,90 @@
+
+.grid-header {
+    height: 70px;
+}
+
+.main-header,
+.setting {
+    padding: 0 15px;
+}
+
+.traffic,
+.daily,
+.mobile,
+.social,
+.members,
+.activity,
+.message {
+    padding: 0 15px;
+    border-bottom: 2px solid $color-border;    
+}
+
+.tab {
+    width: 60%;
+    border-bottom: 2px solid $color-border;
+    border-left: 2px solid $color-border;
+    background-color: $color-tertiary;
+}
+
+.traffic-nav {
+    list-style: none;
+    padding-left: 0;
+}
+
+.social-container {
+    width: 100%;
+    padding: 10px;
+    margin: 15px auto;
+    border: 2px solid $color-border;
+    border-radius: 8px;
+    background-color: $color-tertiary;
+}
+.social-text {
+    margin-left: 20px;
+}
+.social-name {
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+.social-number {
+    margin: 0;
+}
+
+.members-container,
+.activity-container {
+    padding: 20px 0;
+    border-bottom: 2px solid $color-border;
+
+    &:last-child {
+        border: none;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.members-text {
+    p {
+        margin: 0;
+    }
+}
+
+.form-field,
+.form-area {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid $color-border;
+    background-color: $color-tertiary;
+}
+
+.form-field {
+    height: 45px;
+}
+
+.form-area {
+    height: 150px;
+}
+
+

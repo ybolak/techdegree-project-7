@@ -16,6 +16,8 @@ $dusty-gray:           #999999;
 $black:                #000000;
 $white:                #ffffff;
 $gray:                 #777777;
+$wild-sand:            #F5F5F5;
+$silver:               #CCCCCC;
 
 
 
@@ -27,6 +29,7 @@ $gray:                 #777777;
 //main
 $color-primary:         $ship-cove;
 $color-secondary:       $mulled-wine;
+$color-tertiary:        $wild-sand;
 
 //font
 $font-color-primary:    $black;
@@ -42,6 +45,8 @@ $color-chart-tertiary:  $fountain-blue;
 //buttons
 $color-btn-cancel:      $dusty-gray;
 
+//borders
+$color-border:          $silver;
 
 
 /* ============================================= */
@@ -58,6 +63,9 @@ $color-btn-cancel:      $dusty-gray;
 /*         Font weights                          */
 /* ============================================= */
 
+$font-light: 300;
+$font-regular:400;
+$font-heavy: 700;
 
 
 

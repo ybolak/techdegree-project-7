@@ -8,6 +8,14 @@
     box-sizing: border-box;
 }
 
+h2 {
+    font-weight: $font-regular;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: $font-regular;
+}
 
 
 
@@ -38,7 +46,17 @@
 /* ============================================= */
 
 .grid-header {
+    color: $font-color-secondary;
     background-color: $color-primary;
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 14px;
+        text-transform: capitalize;
+    }
 }
 
 .grid-nav {
@@ -50,6 +68,34 @@
     }
 }
 
+.social-name {
+    color: $color-secondary;
+    font-size: 20px;
+}
+
+.social-number {
+    color: $font-color-tertiary;
+    font-size: 40px;
+}
+
+.members-container {
+    text-align: center;
+}
+.members-text {
+    a {
+        text-decoration: none;
+        color: $color-primary;
+    }
+}
+
+.activity-container {
+    text-align: center;
+}
+
+.form-field,
+.form-area {
+    color: $font-color-tertiary;
+}
 
 
 

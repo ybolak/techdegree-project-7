@@ -1,17 +1,23 @@
-.header-img {
+.header-img {    
+    width: 45px;
+    height: 45px;
     border-radius: 50% 50%;
-    width: 60px;
-    height: 60px;
 }
 
 .nav-icon {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 }
 
 .social-image {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50% 50%;
     background-color: $color-primary;
+}
+
+.members-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50% 50%;
 }

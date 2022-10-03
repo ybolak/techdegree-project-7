@@ -1,10 +1,17 @@
 @import 'utilities/index',
         'base/index',
-        'component/index';
+        'component/index',
+        'layout/index';
 
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
+
+@media (max-width: $sm-break) {
+    html {
+        width: 100%;
+    }
+}
 
 @media (min-width: $med-break) {
     .grid-container {
@@ -13,8 +20,15 @@
             "header header"
             "navigation main";
     }
+
+    .grid-nav {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
     .grid-main {
         grid-template-columns: 50%;
+
     }
 
     .traffic,
