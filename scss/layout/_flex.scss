@@ -2,9 +2,19 @@
     display: flex;
 }
 
+.tab {
+    flex-grow: 1;
+}
+
 .grid-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
 }
 
 .grid-nav {

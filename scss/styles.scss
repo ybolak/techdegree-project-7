@@ -8,12 +8,14 @@
 /* ============================================= */
 
 @media (max-width: $sm-break) {
-    html {
-        width: 100%;
+    .grid-container {
+        width: 320px;
     }
 }
 
+
 @media (min-width: $med-break) {
+
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas: 
@@ -21,9 +23,16 @@
             "navigation main";
     }
 
+    .grid-header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .grid-nav {
         flex-direction: column;
         justify-content: flex-start;
+        row-gap: 20px;
+        padding-top: 20px;
     }
 
     .grid-main {
@@ -31,6 +40,7 @@
 
     }
 
+    .main-header,
     .traffic,
     .social,
     .members,
@@ -46,6 +56,67 @@
 
     .mobile {
         grid-column: 2 / span 1;
+    }
+
+    .widget-container-full {
+        width: 90vw;
+    }
+
+    .widget-container-half {
+        width: 45vw;
+    }
+
+    .traffic-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .traffic-nav {
+        column-gap: 30px;
+    }
+
+    .daily {
+        border-right: 2px solid $color-border;
+    }
+
+    .social-items {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    .social-container {
+        margin-top: 0;
+    }
+
+    .members-container,
+    .activity-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .members-info {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    .members-text {
+        text-align: left;
+    }
+
+    .toggle-switch {
+        width: 45%;
+    }
+
+    .arrow-right{
+        border: 0;
+        border-top: solid 2px $color-secondary;
+        border-right: solid 2px $color-secondary;
+        display: inline-block;
+        transform: rotate(45deg);
+        width: 10px;
+        height: 10px;
     }
     
 }
@@ -66,5 +137,27 @@
     .activity,
     .setting {
         grid-column: 2 / span 1;
+    }
+
+    .members,
+    .message {
+        border-right: 2px solid $color-border;
+    }
+
+    .message {
+        border-bottom: none;
+    }
+
+    .members-info {
+        width: 95%;
+    }
+
+    .members-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .toggle-switch {
+        width: 65%;
     }
 }

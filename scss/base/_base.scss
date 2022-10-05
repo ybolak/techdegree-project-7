@@ -1,11 +1,12 @@
 
 .grid-header {
     height: 70px;
+    padding: 0 10px;
 }
 
-.main-header,
-.setting {
-    padding: 0 15px;
+.line {
+    height: 40px;
+    border-left: 2px solid rgba($color-border, .5);
 }
 
 .traffic,
@@ -19,8 +20,18 @@
     border-bottom: 2px solid $color-border;    
 }
 
+.setting {
+    padding: 0 15px;
+}
+
+.main-header {
+    padding-left: 15px;
+    h2 {
+        margin-right: 15px;
+    }
+}
+
 .tab {
-    width: 60%;
     border-bottom: 2px solid $color-border;
     border-left: 2px solid $color-border;
     background-color: $color-tertiary;
