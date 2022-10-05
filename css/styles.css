@@ -638,6 +638,16 @@ h3 {
   margin: 10px 0;
 }
 
+.alert-banner {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  background-color: #7477BF;
+  border-radius: 8px;
+  margin: 20px 20px;
+  color: #ffffff;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
@@ -669,7 +679,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .grid-container {
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 55px minmax(0, 1fr);
     grid-template-areas: "header header" "navigation main";
   }
 
@@ -697,14 +707,17 @@ h3 {
 .message,
 .setting {
     grid-column: 1/span 2;
+    min-width: 0;
   }
 
   .daily {
     grid-column: 1/span 1;
+    min-width: 0;
   }
 
   .mobile {
     grid-column: 2/span 1;
+    min-width: 0;
   }
 
   .widget-container-full {
@@ -806,6 +819,10 @@ h3 {
 
   .toggle-switch {
     width: 65%;
+  }
+
+  #timezone {
+    margin-top: 40px;
   }
 }
 
