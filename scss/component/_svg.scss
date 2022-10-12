@@ -1,8 +1,26 @@
+.bell-container {
+    position: relative;
+}
+
 .bell {
-    
     width: 20px;
     height: 20px;
     fill: $font-color-secondary;
+    transition: .5s ease;
+
+    // &:hover {
+    //     transform: scale(1.3) rotate(20deg);
+    // }
+}
+
+.badge {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 4px;
+    left: 15px;
+    border-radius: 50%;
+    background-color: $color-accent;
 }
 
 .social-icon {

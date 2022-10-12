@@ -464,6 +464,11 @@ h3 {
   padding-left: 0;
 }
 
+.widget-container-full,
+.widget-container-half {
+  margin: 20px 0;
+}
+
 .social-container {
   width: 100%;
   padding: 10px;
@@ -521,10 +526,25 @@ h3 {
   height: 150px;
 }
 
+.bell-container {
+  position: relative;
+}
+
 .bell {
   width: 20px;
   height: 20px;
   fill: #ffffff;
+  transition: 0.5s ease;
+}
+
+.badge {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 4px;
+  left: 15px;
+  border-radius: 50%;
+  background-color: #81C98F;
 }
 
 .social-icon {
@@ -535,7 +555,7 @@ h3 {
 .header-img {
   width: 40px;
   height: 40px;
-  border-radius: 50% 50%;
+  border-radius: 50%;
 }
 
 .nav-icon {
@@ -546,14 +566,14 @@ h3 {
 .social-image {
   width: 70px;
   height: 70px;
-  border-radius: 50% 50%;
+  border-radius: 50%;
   background-color: #7477BF;
 }
 
 .members-img {
   width: 80px;
   height: 80px;
-  border-radius: 50% 50%;
+  border-radius: 50%;
 }
 
 .button-primary {
@@ -592,6 +612,157 @@ h3 {
 .widget-container-full,
 .widget-container-half {
   width: 90vw;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+.box::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+  border-radius: 5px;
+}
+
+.box::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+}
+
+.box::-webkit-scrollbar-thumb {
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.icons {
+  display: inline;
+  float: right;
+}
+
+.bell {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.fas {
+  font-size: 25pt;
+  padding-bottom: 10px;
+  color: black;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.box {
+  height: 0;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+.notification-open {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  transition: 0.5s;
+  position: absolute;
+  overflow-y: scroll;
+  padding: 0px;
+  top: 40px;
+  left: -250px;
+  margin-top: 5px;
+  background-color: #F4F4F4;
+  -webkit-box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.1);
+  cursor: context-menu;
+}
+
+.fas:hover {
+  color: #d63031;
+}
+
+.content {
+  padding: 20px;
+  color: black;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.gry {
+  background-color: #F4F4F4;
+}
+
+.top {
+  color: black;
+  padding: 10px;
+}
+
+.cont {
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F4F4F4;
+}
+
+.cont:empty {
+  display: none;
+}
+
+.stick {
+  text-align: center;
+  display: block;
+  font-size: 50pt;
+  padding-top: 70px;
+  padding-left: 80px;
+}
+
+.stick:hover {
+  color: black;
+}
+
+.cent {
+  text-align: center;
+  display: block;
+}
+
+.sec {
+  padding: 25px 10px;
+  background-color: #F4F4F4;
+  transition: 0.5s;
+}
+
+.profile {
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  width: 75px;
+  float: left;
+}
+
+.txt {
+  vertical-align: top;
+  font-size: 1.25rem;
+}
+
+.sub {
+  font-size: 1rem;
+  color: grey;
+}
+
+.new {
+  border-style: none none solid none;
+  border-color: red;
+}
+
+.sec:hover {
+  background-color: #BFBFBF;
 }
 
 .main-header {
@@ -640,9 +811,10 @@ h3 {
 
 .alert-banner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   column-gap: 20px;
   background-color: #7477BF;
+  padding: 0 20px;
   border-radius: 8px;
   margin: 20px 20px;
   color: #ffffff;
@@ -700,6 +872,7 @@ h3 {
   }
 
   .main-header,
+.alert,
 .traffic,
 .social,
 .members,
@@ -725,7 +898,7 @@ h3 {
   }
 
   .widget-container-half {
-    width: 45vw;
+    width: 42vw;
   }
 
   .traffic-header {

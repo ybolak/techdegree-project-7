@@ -46,9 +46,10 @@
 
 .alert-banner {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     column-gap: 20px;
     background-color: $color-primary;
+    padding: 0 20px;
     border-radius: 8px;
     margin: 20px 20px;
     color: $font-color-secondary;
