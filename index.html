@@ -17,7 +17,7 @@
             <header class="grid-header">                
                 <h1>WebApp&trade;</h1>
                 <div class="bell-container">
-                    <div class="bell" href="#">
+                    <div class="bell">
                         <!-- notification animation credit by Gabriel Velez https://codepen.io/Golez/pen/eQNRje?editors=1100-->    
                         <div class = "box">
                             <!-- <div class = "display"> -->
@@ -28,28 +28,28 @@
                                 <div class = "cont">
                                     <div class = "sec new">
                                         <a href="">
-                                            <div class = "txt">James liked your post: "Pure css notification box"</div>
+                                            <div class = "txt">Victoria liked your post: "Pure css notification box"</div>
                                             <div class = "txt sub">11/7 - 2:30 pm</div>
                                         </a>
                                     </div>
                                     
                                     <div class = "sec">
                                         <a href = "">
-                                            <div class = "txt">Brie liked your post: "Pure css notification box"</div>
+                                            <div class = "txt">Dan liked your post: "Pure css notification box"</div>
                                             <div class = "txt sub">11/6 - 9:35 pm</div>
                                         </a>
                                     </div>  
                                     
                                     <div class = "sec">
                                         <a href = "">
-                                            <div class = "txt">Brie liked your post: "Pure css notification box"</div>
+                                            <div class = "txt">Dawn liked your post: "Pure css notification box"</div>
                                             <div class = "txt sub">11/6 - 9:35 pm</div>
                                         </a>
                                     </div>   
                                     
                                     <div class = "sec">
                                         <a href = "">
-                                            <div class = "txt">Brie liked your post: "Pure css notification box"</div>
+                                            <div class = "txt">Dale liked your post: "Pure css notification box"</div>
                                             <div class = "txt sub">11/6 - 9:35 pm</div>
                                         </a>
                                     </div>    
@@ -99,7 +99,7 @@
                         <div class="traffic-header">
                             <h3>Traffic</h3>
                             <ul class="traffic-nav">
-                                <li class="traffic-nav-link">Hourly</li>
+                                <li class="traffic-nav-link selected">Hourly</li>
                                 <li class="traffic-nav-link">Daily</li>
                                 <li class="traffic-nav-link">Weekly</li>
                                 <li class="traffic-nav-link">Monthly</li>
@@ -171,7 +171,7 @@
 
                         <div class="members-container">
                             <div class="members-info">
-                                <img class="members-img" src="images/member-1.jpg">
+                                <img class="members-img" src="images/member-1.jpg" alt="picture of Victoria Chambers">
                                 <div class="members-text">
                                     <p>Victoria Chambers</p>
                                     <a href="#">victoria.chambers80@example.com</a>                                
@@ -182,7 +182,7 @@
 
                         <div class="members-container">
                             <div class="members-info">
-                                <img class="members-img" src="images/member-2.jpg">
+                                <img class="members-img" src="images/member-2.jpg" alt="picture of Dale Byrd">
                                 <div class="members-text">
                                     <p>Dale Byrd</p>
                                     <a href="#">dale.byrd52@example.com</a>
@@ -194,7 +194,7 @@
 
                         <div class="members-container">
                             <div class="members-info">
-                                <img class="members-img" src="images/member-3.jpg">
+                                <img class="members-img" src="images/member-3.jpg" alt="picture of Dawn Wood">
                                 <div class="members-text">
                                     <p>Dawn Wood</p>
                                     <a href="#">dawn.wood16@example.com</a>
@@ -205,7 +205,7 @@
 
                         <div class="members-container">
                             <div class="members-info">
-                                <img class="members-img" src="images/member-4.jpg">
+                                <img class="members-img" src="images/member-4.jpg" alt="picture of Dan Oliver">
                                 <div class="members-text">
                                     <p>Dan Oliver</p>
                                     <a href="#">dan.oliver82@example.com</a>
@@ -221,7 +221,7 @@
 
                         <div class="activity-container">
                             <div class="members-info">
-                                <img class="members-img" src="images/member-1.jpg">
+                                <img class="members-img" src="images/member-1.jpg" alt="picture of Victoria Chambers">
                                 <div class="members-text">
                                     <p>Victoria Chambers commented on <strong>WebApp's SEO Tips</strong></p>
                                     <p>4 hours ago</p>
@@ -232,7 +232,7 @@
 
                         <div class="activity-container">
                             <div class="members-info">
-                                <img class="members-img" src="images/member-2.jpg">
+                                <img class="members-img" src="images/member-2.jpg" alt="picture of Dale Byrd">
                                 <div class="members-text">
                                     <p>Dale Byrd liked the post <strong>Facebook's Changes for 2021</strong></p>
                                     <p>5 hours ago</p>
@@ -243,7 +243,7 @@
 
                         <div class="activity-container">
                             <div class="members-info">
-                                <img class="members-img" src="images/member-3.jpg">
+                                <img class="members-img" src="images/member-3.jpg" alt="picture of Dawn Wood">
                                 <div class="members-text">
                                     <p>Dawn Wood commented on <strong>Facebook's Changes for 2021</strong></p>
                                     <p>5 hours ago</p>
@@ -254,7 +254,8 @@
 
                         <div class="activity-container">
                             <div class="members-info">
-                                <img class="members-img" src="images/member-4.jpg">
+                                <img class="members-img" src="images/member-4.jpg" alt="picture of Dan Oliver">
+                                <div class="members-text"></div>
                                 <div class="members-text">
                                     <p>Dan Oliver posted <strong>WebApp's SEO Tips</strong></p>
                                     <p>1 day ago</p>
@@ -262,15 +263,22 @@
                             </div>
                             <a href="#" class="arrow-right"></a>
                         </div>
-                    </section>
+                    </section>                
 
                     <section class="message">
                         <h3>Message User</h3>
                         <form class="widget-container">
-                            <input id="userField" class="form-field" type="text" placeholder="Search for User">
-                            <textarea id="messageField" class="form-area" placeholder="Message for User"></textarea>
+                            <div class="wrapper">
+                                <div class="search-input">
+                                    <a href="" target="_blank" hidden></a>
+                                    <input id="userField" class="form-field" type="text" placeholder="Search for User">
+                                    <div class="autocom-box"></div>
+                                    <!-- here list are inserted from javascript -->
+                                    <textarea id="messageField" class="form-area" placeholder="Message for User"></textarea>
 
-                            <button id="send" class="button-primary" type="submit">SEND</button>
+                                    <button id="send" class="button-primary" type="submit">SEND</button>
+                                </div>
+                            </div>
                         </form>
                     </section>
                     
@@ -319,6 +327,7 @@
                             <button id="cancel" class="button-disabled">Cancel</button>
                         </div>
                     </section>
+
                 </div>
             </main>
             

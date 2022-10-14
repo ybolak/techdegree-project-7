@@ -31,21 +31,71 @@ alertIcon.addEventListener('click', () => {
 
 
 /* ============================================= */
+/*                 Traffic Nav                   */
+/* ============================================= */
+
+const trafficNav = document.querySelector('.traffic-nav');
+
+trafficNav.addEventListener('click', (e) => {    
+    if (e.target.tagName === 'LI') { 
+        const element = e.target;
+        const items = document.getElementsByClassName('traffic-nav-link');       
+        for (let i=0; i<items.length; i++) {
+            let item = items[i];
+            if (item.classList.contains('selected')) {
+                item.classList.remove('selected');
+            }
+        }
+        element.classList.add('selected');
+    }   
+});
+
+
+/* ============================================= */
 /*                 Line Chart                    */
 /* ============================================= */
 
 const trafficCanvas = document.getElementById('traffic-chart');
 
-let trafficData = {
+
+let hourly = {
+    labels: ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"],
+    datasets: [{
+        data:[10, 9, 5, 3, 4, 10, 30, 40, 35, 25, 15, 15, 25, 20, 15, 20, 25, 30, 40, 35, 25, 20, 15, 10],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+    }]
+};
+
+let daily = {
+    labels: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "STA"],
+    datasets: [{
+        data:[75, 115, 175, 125, 225, 200, 100],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+    }]
+};
+
+let weekly = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
-        data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,2500],
+        data:[750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,2500],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+    }]
+};
+
+let monthly = {
+    labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+    datasets: [{
+        data:[4500, 5000, 6000, 7000, 7500, 8000, 9000, 9500, 8500, 7000, 6000, 5000],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
     }]
 };
 
 let trafficOptions = {
+    tension: 0.4,
     backgroundColor: 'rgba(112, 104, 201, .5)',
     fill: true,
     aspectRatio: 2.5,
@@ -64,11 +114,37 @@ let trafficOptions = {
     }
 };
 
+let trafficData = hourly;
+
+// click handler for chart to change data
+// when nav UL is clicked, event occurs
+trafficNav.addEventListener('click', e => {
+    const navItem = e.target.textContent;
+    if (navItem === 'Hourly') {
+        trafficData = hourly;             
+    } else if (navItem === 'Daily') {
+        trafficData = daily;
+    } else if (navItem === 'Weekly') {
+        trafficData = weekly;
+    } else if (navItem === 'Monthly') {
+        trafficData = monthly; 
+    }
+
+    trafficChart.destroy();
+
+    trafficChart = new Chart(trafficCanvas, {
+        type: 'line',   
+        data: trafficData,
+        options: trafficOptions
+    });
+});
+
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',   
     data: trafficData,
     options: trafficOptions
 });
+    
 
 /* ============================================= */
 /*                  Bar Graph                    */
@@ -163,3 +239,62 @@ send.addEventListener('click', () => {
         alert(`Message successfully sent to: ${user.value}`);
     }
 });
+
+
+/* ============================================= */
+/*                Autocomplete                   */
+/* ============================================= */
+
+const searchWrapper = document.querySelector(".search-input");
+const inputBox = searchWrapper.querySelector("input");
+const suggBox = searchWrapper.querySelector(".autocom-box");
+let linkTag = searchWrapper.querySelector("a");
+let webLink;
+let suggestions = [
+    'Victoria Chambers',
+    'Dale Byrd',
+    'Dawn Wood',
+    'Dan Oliver'
+];
+
+function select(element){                                                           
+    let selectData = element.textContent;
+    inputBox.value = selectData;
+    searchWrapper.classList.remove("active");
+}
+
+function showSuggestions(list){
+    let listData;
+    if(!list.length){
+        userValue = inputBox.value;
+        listData = `<li>${userValue}</li>`;
+    }else{
+      listData = list.join('');
+    }
+    suggBox.innerHTML = listData;
+}
+
+// if user press any key and release
+inputBox.onkeyup = (e)=>{
+    let userData = e.target.value; //user entered data
+    let emptyArray = [];
+    if(userData){
+        emptyArray = suggestions.filter((data)=>{
+            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+        });
+        emptyArray = emptyArray.map((data)=>{
+            // passing return data inside li tag
+            return data = `<li>${data}</li>`;
+        });
+        searchWrapper.classList.add("active"); //show autocomplete box
+        showSuggestions(emptyArray);
+        let allList = suggBox.querySelectorAll("li");
+        for (let i = 0; i < allList.length; i++) {
+            //adding onclick attribute in all li tag
+            allList[i].setAttribute("onclick", "select(this)");
+        }
+    }else{
+        searchWrapper.classList.remove("active"); //hide autocomplete box
+    }
+};
+

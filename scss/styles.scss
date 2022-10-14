@@ -130,19 +130,30 @@
     .traffic,
     .social {
         grid-column: 1 / span 2;
+        width: 1024px;
+        margin: 0 auto;
     }
 
     .daily,
     .members,
     .message {
         grid-column: 1 / span 1;
+        width: 512px;
+        margin-left: auto;
     }
 
     .mobile,
     .activity,
     .setting {
         grid-column: 2 / span 1;
+        width: 512px;
     }
+
+    .widget-container-full,
+    .widget-container-half {
+        width: 100%;
+    }
+
 
     .members,
     .message {
