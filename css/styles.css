@@ -676,7 +676,7 @@ a:visited {
 }
 
 .notification-open {
-  width: 400px;
+  width: 300px;
   height: 300px;
   border-radius: 10px;
   transition: 0.5s;
@@ -684,7 +684,7 @@ a:visited {
   overflow-y: scroll;
   padding: 0px;
   top: 40px;
-  left: -250px;
+  left: -126px;
   margin-top: 5px;
   background-color: #F4F4F4;
   -webkit-box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.2);
@@ -913,6 +913,11 @@ a:visited {
     grid-template-columns: 50%;
   }
 
+  .notification-open {
+    width: 400px;
+    left: -250px;
+  }
+
   .main-header,
 .alert,
 .traffic,
@@ -1000,7 +1005,7 @@ a:visited {
   .traffic,
 .social {
     grid-column: 1/span 2;
-    width: 1024px;
+    width: 969px;
     margin: 0 auto;
   }
 
@@ -1008,7 +1013,7 @@ a:visited {
 .members,
 .message {
     grid-column: 1/span 1;
-    width: 512px;
+    width: 484px;
     margin-left: auto;
   }
 
@@ -1016,7 +1021,7 @@ a:visited {
 .activity,
 .setting {
     grid-column: 2/span 1;
-    width: 512px;
+    width: 484px;
   }
 
   .widget-container-full,
